@@ -1,16 +1,20 @@
 using UnityEngine;
-using UnityEngine.Events;
+using UnityEngine.InputSystem;
 
 public class PlayerInputs : MonoBehaviour
 {
-    public UnityEvent<Vector3> onP1Intups;
-    public UnityEvent<Vector3> onP2Intups;
+    [SerializeField] private CharacterMovement leftAvatar;
+    [SerializeField] private CharacterMovement rightAvatar;
 
-    // Update is called once per frame
-    void Update()
+    public void OnMoveLeftAvatar(InputAction.CallbackContext context)
     {
-        onP1Intups?.Invoke(new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")));
-
-        onP2Intups?.Invoke(new Vector3(Input.GetAxis("Horizontal2"), 0, Input.GetAxis("Vertical2")));
+        Vector2 input = context.ReadValue<Vector2>();
+        leftAvatar.MoveDir(new Vector3(input.x, 0, input.y));
+    }
+    
+    public void OnMoveRightAvatar(InputAction.CallbackContext context)
+    {
+        Vector2 input = context.ReadValue<Vector2>();
+        rightAvatar.MoveDir(new Vector3(input.x, 0, input.y));
     }
 }
