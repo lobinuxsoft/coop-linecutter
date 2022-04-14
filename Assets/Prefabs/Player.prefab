@@ -390,18 +390,27 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 1
+      time: 0.001
+      value: 0.25
+      inSlope: 38.793896
+      outSlope: 1.1901213
+      tangentMode: 1
+      weightedMode: 2
+      inWeight: 0.010077298
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.79809225
       value: 1
       inSlope: 0
       outSlope: 0
-      tangentMode: 0
+      tangentMode: 136
       weightedMode: 0
-      inWeight: 0
-      outWeight: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  maxDistanceConnection: 5
+  maxDistanceConnection: 20
   lineSize: 0
   distanceDelta: 0
   distance: 0
